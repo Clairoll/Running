@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/mui.js"></script>
+		<style type="text/css">
+			.set-logo img {
+				width: 100px;
+				height: 100px;
+				float: left;
+				margin-right: 20px;
+			}
+
+			.set-body p {
+				padding-top: 35px;
+				font-size: 20px;
+				color: #000;
+				font-weight: normal;
+			}
+
+			.person input[type="text"] {
+				width: 250px;
+				margin-bottom: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</head>
+	<body>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right set-logo">
+					<div class="set-logo">
+						<img src="images/logo.jpg" />
+						<div class="set-body">
+							<p>修改头像</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					昵称: <input type="text" placeholder="风雅">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					性别: <input type="radio" name="sex" checked="">男 <input type="radio" name="sex">女
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					生日: <input type="text" placeholder="1997-02-12">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					职业: <input type="text" placeholder="学生">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					家乡: <input type="text" placeholder="安徽-安庆">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					邮箱: <input type="text" placeholder="123456@qq.com">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					个性签名:
+				</a>
+				<textarea rows="5" cols="5">
+
+				</textarea>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate person">
+					保存:
+				</a>
+				<div class="mui-switch mui-switch-mini">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</li>
+		</ul>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true
+			})
+		</script>
+	</body>
+
+</html>

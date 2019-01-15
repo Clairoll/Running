@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>主页</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+	</head>
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-action-login mui-icon mui-icon-redo mui-pull-right">登录</a>
+					
+					<h1 class="mui-title" id="title">Running</h1>
+				</header>
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active" href="list.html">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" href="add.html">
+						<span class="mui-icon mui-icon-plus"></span>
+						<span class="mui-tab-label">上传</span>
+					</a>
+					<a class="mui-tab-item" href="friend.html">
+						<span class="mui-icon iconfont icon-personnel"></span>
+						<span class="mui-tab-label">好友</span>
+					</a>
+					<a class="mui-tab-item" href="setUp.html">
+						<span class="mui-icon mui-icon-person"></span>
+						<span class="mui-tab-label">设置</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			subpages: [{
+				url: 'list.html', //子页面HTML地址，支持本地地址和网络地址
+				id: 'list.html', //子页面标志
+				styles: {
+					top: '44px', //子页面顶部位置
+					bottom: '50px', //子页面底部位置
+				}
+			}],
+			preloadPages: [{
+				url: 'add.html',
+				id: 'add.html'
+			}, {
+				url: 'setUp.html',
+				id: 'setUp.html'
+			}, {
+				url: 'friend.html',
+				id: 'friend.html'
+			}]
+		});
+		var subpages = ['list.html', 'add.html', 'friend.html', 'setUp.html']; //以数组方式设置页面id
+		var subpageStyle = { //设置主页面打开的样式(设置顶部和底部，留空间给中间部分显示出来，放sub1.html这些页面)
+			top: '44px', //标题栏的高度，更多详细参数查看http://dev.dcloud.net.cn/mui/ui/#mask
+			bottom: '50px' //底部选项卡的高度
+
+		};
+		mui.plusReady(function() {
+			var self = plus.webview.currentWebview(); //创建子窗体
+			for (var i = 0; i < subpages.length; i++) {
+				var sub = plus.webview.create(subpages[i], subpages[i], subpageStyle); //当前Webview的URL地址、ID、样式。功能：创建子窗体
+				sub.hide(); //功能：隐藏页面
+				self.append(sub); //功能： 追加子页面,首个选项卡页面显示，其它均隐藏
+			}
+			plus.webview.show(subpages[0]); //设置主页的sub.html默认显示出来，其他sub2.html默认隐藏
+
+		})
+		mui(".mui-bar-tab").on("tap", "a", function(e) { //通过.mui-bar-tap里的a元素绑定tap事件，达到批量绑定的效果
+			var tagPage = this.getAttribute("href"); //getAttribute()获取属性函数
+			plus.webview.show(tagPage, "fade-in", 100) //fade-in淡入，100毫秒
+		})
+	</script>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/mui.js"></script>
+		<style type="text/css">
+			.mui-card-content img {
+				width: 100%;
+			}
+		</style>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</head>
+	<body>
+		<div class="mui-card" onclick="showPop();">
+			<!--页眉，放置标题-->
+			<div class="mui-card-header">第一步:未完成</div>
+			<!--内容区-->
+			<div class="mui-card-content">
+				<img src="images/face.jpg" alt="">
+			</div>
+			<!--页脚，放置补充信息或支持的操作-->
+			<div class="mui-card-footer">人脸识别</div>
+		</div>
+		<div class="mui-card" onclick="showPop();">
+			<!--页眉，放置标题-->
+			<div class="mui-card-header">第二步:未完成</div>
+			<!--内容区-->
+			<div class="mui-card-content">
+				<img src="images/card.jpg" alt="">
+			</div>
+			<!--页脚，放置补充信息或支持的操作-->
+			<div class="mui-card-footer">证件认证</div>
+		</div>
+		<div class="mui-card" onclick="showPop();">
+			<!--页眉，放置标题-->
+			<div class="mui-card-header">第三步:未完成</div>
+			<!--内容区-->
+			<div class="mui-card-content">
+				<img src="images/phone.jpg" alt="">
+			</div>
+			<!--页脚，放置补充信息或支持的操作-->
+			<div class="mui-card-footer">手机认证</div>
+		</div>
+		<div class="mui-card" onclick="showPop();">
+			<!--页眉，放置标题-->
+			<div class="mui-card-header">第四步:未完成</div>
+			<!--内容区-->
+			<div class="mui-card-content">
+				<img src="images/store.jpg" alt="">
+			</div>
+			<!--页脚，放置补充信息或支持的操作-->
+			<div class="mui-card-footer">店铺认证</div>
+		</div>
+		<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍摄</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">相册选择</a>
+				</li>
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#sheet1"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			function showPop() {
+				mui('#sheet1').popover('toggle');
+			}
+			mui.init({
+				swipeBack: true
+			})
+		</script>
+	</body>
+
+</html>

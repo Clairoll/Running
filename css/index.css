@@ -1,0 +1,53 @@
+
+.I-center {
+	width: 100%;
+	height: 190px;
+	margin-top: 10px;
+}
+.I-center .left {
+	float: left;
+	width: 49%;
+	height: 100%;
+	background-image: url(../images/index/card.jpg);
+	/* line-height: 190px; */
+	color: white;
+	font-size: 24px;
+}
+.I-center .left a{
+	text-decoration: none;
+	display: block;
+	color: white;
+	font-size: 24px;
+	margin: 30px;
+	padding: 5px;
+	background: rgba(238, 238, 238, 0.5);
+}
+.I-center .right  {
+	float: right;
+	width: 49%;
+	height: 100%;
+}
+.right .plan {
+	height: 49%;
+	width: 100%;
+	background-image: url(../images/index/plain.jpg);
+	margin-bottom: 2%;
+}
+.right .friend {
+	height: 49%;
+	width: 100%;
+	background-image: url(../images/index/friend.jpg);
+}
+.right  a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 24px;
+	margin: 0 30px;
+	background: rgba(238, 238, 238, 0.5);
+	padding: 5px;
+}
+.video  video{
+	margin-top: 10px;
+	width:100%;
+}

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/mui.js"></script>
+		<style type="text/css">
+			.set-logo img {
+				width: 100px;
+				height: 100px;
+				float: left;
+				margin-right: 20px;
+			}
+
+			.set-body p {
+				padding-top: 30px;
+				font-size: 24px;
+				color: #000;
+			}
+		</style>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</head>
+	<body>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right set-logo" id="setlogo">
+					<div class="set-logo">
+						<img src="images/logo.jpg" />
+						<div class="set-body">
+							<p>风雅</p>
+							<span>Runing号:123456</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" id="person">
+					<span class="mui-icon mui-icon-person"></span> 基本资料
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" id="personal-authentication">
+					<span class="mui-icon mui-icon-compose"> </span> 个人认证
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" id="merchant-certification">
+					<span class="mui-icon iconfont icon-peijianshang"> </span> 商家认证
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" id="coach-certification">
+					<span class="mui-icon iconfont icon-person"> </span> 教练认证
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon iconfont icon-money"> </span> 我的钱包
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon iconfont icon-mywelfare"> </span> 我的收藏
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon iconfont icon-svgmember"> </span> 我的会员
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon iconfont icon-mywelfare"> </span> 我的公益
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon mui-icon-gear"> </span> 设置
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="mui-icon mui-icon-phone"> </span> 联系我们
+				</a>
+			</li>
+		</ul>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var person = document.getElementById('person');
+				var setlogo = document.getElementById('setlogo');
+				var personalAuthentication = document.getElementById('personal-authentication');
+				var merchantCertification = document.getElementById('merchant-certification');
+				var coachCertification = document.getElementById('coach-certification');
+				
+				person.addEventListener("tap", function() {
+					mui.openWindow({
+						url: "person.html",
+						id: "person.html",
+						styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+							titleNView: { // 窗口的标题栏控件
+								titleText: "基本资料", // 标题栏文字,当不设置此属性时，默认加载当前页面的标题，并自动更新页面的标题
+								titleColor: "#360000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								titleSize: "17px", // 字体大小,默认17px
+								backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								},
+								splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+									color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+									height: "1px" // 分割线高度,默认值为"2px"
+								}
+							}
+						}
+					});
+				})
+				setlogo.addEventListener("tap", function() {
+					mui.openWindow({
+						url: "person.html",
+						id: "person.html",
+						styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+							titleNView: { // 窗口的标题栏控件
+								titleText: "基本资料", // 标题栏文字,当不设置此属性时，默认加载当前页面的标题，并自动更新页面的标题
+								titleColor: "#360000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								titleSize: "17px", // 字体大小,默认17px
+								backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								},
+								splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+									color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+									height: "1px" // 分割线高度,默认值为"2px"
+								}
+							}
+						}
+					});
+				})
+				personalAuthentication.addEventListener("tap", function() {
+					mui.openWindow({
+						url: "personal-authentication.html",
+						id: "personal-authentication.html",
+						styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+							titleNView: { // 窗口的标题栏控件
+								titleText: "个人认证", // 标题栏文字,当不设置此属性时，默认加载当前页面的标题，并自动更新页面的标题
+								titleColor: "#360000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								titleSize: "17px", // 字体大小,默认17px
+								backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								},
+								splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+									color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+									height: "1px" // 分割线高度,默认值为"2px"
+								}
+							}
+						}
+					});
+				})
+				merchantCertification.addEventListener("tap", function() {
+					mui.openWindow({
+						url: "merchant-certification.html",
+						id: "merchant-certification.html",
+						styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+							titleNView: { // 窗口的标题栏控件
+								titleText: "商家认证", // 标题栏文字,当不设置此属性时，默认加载当前页面的标题，并自动更新页面的标题
+								titleColor: "#360000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								titleSize: "17px", // 字体大小,默认17px
+								backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								},
+								splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+									color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+									height: "1px" // 分割线高度,默认值为"2px"
+								}
+							}
+						}
+					});
+				})
+				coachCertification.addEventListener("tap", function() {
+					mui.openWindow({
+						url: "coach-certification.html",
+						id: "coach-certification.html",
+						styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+							titleNView: { // 窗口的标题栏控件
+								titleText: "教练认证", // 标题栏文字,当不设置此属性时，默认加载当前页面的标题，并自动更新页面的标题
+								titleColor: "#360000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								titleSize: "17px", // 字体大小,默认17px
+								backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								},
+								splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+									color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+									height: "1px" // 分割线高度,默认值为"2px"
+								}
+							}
+						}
+					});
+				})
+			})
+		</script>
+	</body>
+
+</html>
